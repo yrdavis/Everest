@@ -1,4 +1,4 @@
-# What?
+# What's this?
 This project has been forked from [Rohit Awate](https://github.com/RohitAwate).
 
 We will be using it to learn about JavaFX in the context of an already existing codebase.
@@ -7,6 +7,15 @@ We will be using it to learn about JavaFX in the context of an already existing 
 1. Clone this repository.
 2. From Eclipse, File > Import > Existing Maven Projects.
 3. Under src/main/java > com.rohitawakte.everest, right click Launcher, and Run As > Java Application.
+
+# Exercises
+
+0. Play with the color theme if you like.
+1. Change the color of "GET" in the history pane to something other than red.
+2. Add a button that clears the results from the history pane.
+<br>*//watch the second video*<br>
+3. Warn the user before exiting when the last tab is closed. You could use the JavaFX [Alert](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Alert.html) class for this, but it's up to you.
+4. Get the copy button working.
 
 # License ⚖️
 Everest is licensed under the [Apache 2.0 License](LICENSE).
