@@ -106,7 +106,7 @@ public class DashboardController implements Initializable {
     private GETRequest getRequest;
     private DataRequest dataRequest;
     private DELETERequest deleteRequest;
-    private EverestCodeArea responseArea;
+    private EverestCodeArea responseArea; //The large area that shows the result of the web service query
     private ResponseLayer visibleLayer;
     private HashMap<Tab, DashboardState> tabStateMap;
     private TabPane tabPane;
@@ -178,13 +178,6 @@ public class DashboardController implements Initializable {
             if (e.getCode() == KeyCode.TAB) {
                 e.consume();
             }
-        });
-
-        copyBodyButton.setOnAction(e -> {
-            responseArea.selectAll();
-            responseArea.copy();
-            responseArea.deselect();
-            snackbar.show("Response body copied to clipboard.", 5000);
         });
 
         responseTypeBox.getItems().addAll(
