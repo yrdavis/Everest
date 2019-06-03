@@ -42,4 +42,6 @@ public interface DataManager {
      * For example, a DataManager using Google Drive may identify itself as 'Google Drive'.
      */
     String getIdentifier();
+    
+    void clearHistory();
 }

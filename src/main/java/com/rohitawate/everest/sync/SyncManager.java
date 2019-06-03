@@ -72,6 +72,13 @@ public class SyncManager {
 
         return history;
     }
+    
+    public void clearHistory() {
+    	managers.get("SQLite").clearHistory();
+    	homeWindowController.reloadHistoryPane();
+    }
+    
+
 
     /**
      * Registers a new DataManager to be used for syncing Everest's data
@@ -91,9 +98,11 @@ public class SyncManager {
         @Override
         public void run() {
             try {
-                for (DataManager manager : managers.values())
+                for (DataManager manager : managers.values()) {
                     manager.saveState(newState);
+                }
             } catch (Exception e) {
+            	e.printStackTrace();
                 LoggingService.logSevere("Could not save history.", e, LocalDateTime.now());
             }
         }
