@@ -71,12 +71,7 @@ public class HomeWindowController implements Initializable {
         tabStateMap = new LinkedHashMap<>();
 
         try {
-            FXMLLoader historyLoader = new FXMLLoader(getClass().getResource("/fxml/homewindow/HistoryPane.fxml"));
-            Parent historyFXML = historyLoader.load();
-            splitPane.getItems().add(0, historyFXML);
-            historyController = historyLoader.getController();
-            historyController.setSyncManager(syncManager);
-            historyController.addItemClickHandler(this::addTab);
+            loadHistoryPane();
 
             FXMLLoader dashboardLoader = new FXMLLoader(getClass().getResource("/fxml/homewindow/Dashboard.fxml"));
             Parent dashboardFXML = dashboardLoader.load();
@@ -107,6 +102,20 @@ public class HomeWindowController implements Initializable {
 
         addressProperty.addListener(this::onTargetChanged);
     }
+
+	private void loadHistoryPane() {
+		String layoutFile = "/fxml/homewindow/HistoryPane.fxml";
+		FXMLLoader historyLoader = new FXMLLoader(getClass().getResource(layoutFile));
+		try {
+			Parent historyFXML = historyLoader.load();
+			splitPane.getItems().add(0, historyFXML);
+		} catch (IOException e) {
+			System.err.println("Couldn't load " + layoutFile);
+		}
+		historyController = historyLoader.getController();
+		historyController.setSyncManager(syncManager);
+		historyController.addItemClickHandler(this::addTab);
+	}
 
     /**
      * Sets up the reflection of the address in the selected tab.
@@ -321,4 +330,9 @@ public class HomeWindowController implements Initializable {
             });
         }
     }
+    
+	public void reloadHistoryPane() {
+		splitPane.getItems().remove(0);
+		loadHistoryPane();
+	}
 }
