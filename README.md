@@ -16,7 +16,7 @@ We will be using it to learn about JavaFX in the context of an already existing 
 5. Watch the second video: [Adding event handling to an existing JavaFX project](https://youtu.be/3BzOA3sCD8Q)
 6. Warn the user before exiting when the last tab is closed. You could use the JavaFX [Alert](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Alert.html) class for this, but it's up to you.
 7. Get the copy button working.
-8. [optional] When a response is returned, color an "OK" status green, and make "Not Found" red.
+8. [optional] When a response is returned, color an "202 OK" status green, and make "404 Not Found" red.
 
 # License ⚖️
 Everest is licensed under the [Apache 2.0 License](LICENSE).
