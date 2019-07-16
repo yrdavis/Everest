@@ -9,7 +9,7 @@ We will be using it to learn about JavaFX in the context of an already existing 
 3. Under src/main/java > com.rohitawakte.everest, right click Launcher, and Run As > Java Application.
 
 # What's to learn
-1. Watch the introduction video: [Getting to grips with an existing JavaFX project](https://youtu.be/csYEFIS89HM)
+1. Watch the introduction video: [Getting to grips with an existing JavaFX project](https://youtu.be/NKTfFxrYwp0)
 2. [optional] Play with the color theme if you like.
 3. Change the color of "GET" in the history pane to something other than red.
 4. Add a button that clears the results from the history pane.
